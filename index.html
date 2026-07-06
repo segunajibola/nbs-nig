@@ -24,171 +24,42 @@
         --accent: #8b1a1a;
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
-
       body {
         font-family: "Georgia", "Times New Roman", serif;
-        background: var(--light);
+        background: var(--white);
         color: var(--dark);
-        line-height: 1.7;
+        line-height: 1.6;
       }
 
-      /* ─── HERO ─────────────────────────────────────── */
-      .hero {
-        background: linear-gradient(
-          160deg,
-          #0d0d0d 0%,
-          #1c1c1c 40%,
-          #2a1a00 100%
-        );
-        color: var(--white);
-        padding: 0;
-        position: relative;
-        overflow: hidden;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+      img {
+        display: block;
+        max-width: 100%;
       }
 
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 40px,
-          rgba(200, 150, 12, 0.03) 40px,
-          rgba(200, 150, 12, 0.03) 80px
-        );
-      }
-
-      .hero-badge {
-        display: inline-block;
-        border: 1px solid var(--gold);
-        color: var(--gold);
-        font-size: 0.7rem;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        padding: 6px 20px;
-        margin-bottom: 28px;
-        font-family: Arial, sans-serif;
-      }
-
-      .hero-logo {
-        font-size: clamp(2.8rem, 7vw, 5.5rem);
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        line-height: 1;
-        margin-bottom: 10px;
-      }
-
-      .hero-logo span {
-        color: var(--gold);
-      }
-
-      .hero-tagline {
-        font-size: clamp(1rem, 2.5vw, 1.35rem);
-        color: rgba(255, 255, 255, 0.75);
-        font-style: italic;
-        margin-bottom: 32px;
-        letter-spacing: 0.04em;
-      }
-
-      .hero-pills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-bottom: 48px;
-      }
-
-      .hero-pills span {
-        background: rgba(200, 150, 12, 0.15);
-        border: 1px solid rgba(200, 150, 12, 0.4);
-        color: var(--gold-light);
-        font-family: Arial, sans-serif;
-        font-size: 0.72rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        padding: 6px 16px;
-        border-radius: 2px;
-      }
-
-      .hero-contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        justify-content: center;
-        font-family: Arial, sans-serif;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.65);
-      }
-
-      .hero-contact a {
-        color: var(--gold-light);
-        text-decoration: none;
-      }
-      .hero-contact a:hover {
-        color: var(--white);
-      }
-
-      .scroll-hint {
-        position: absolute;
-        bottom: 32px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        color: rgba(255, 255, 255, 0.3);
-        font-family: Arial, sans-serif;
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-      }
-
-      .scroll-hint::after {
-        content: "";
-        width: 1px;
-        height: 40px;
-        background: linear-gradient(
-          to bottom,
-          rgba(200, 150, 12, 0.5),
-          transparent
-        );
-      }
-
-      /* ─── SECTIONS ──────────────────────────────────── */
-      section {
-        padding: 80px 24px;
-      }
-
-      .container {
-        max-width: 1100px;
+      /* ─── PAGE / PRINT ──────────────────────────────── */
+      .page {
+        max-width: 950px;
         margin: 0 auto;
+      }
+
+      section {
+        padding: 46px 40px;
       }
 
       .section-label {
         font-family: Arial, sans-serif;
         font-size: 0.65rem;
-        letter-spacing: 0.35em;
+        letter-spacing: 0.3em;
         text-transform: uppercase;
         color: var(--gold);
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
 
       .section-title {
-        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-size: 1.9rem;
         color: var(--charcoal);
         line-height: 1.2;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
       }
 
       .section-title em {
@@ -197,10 +68,99 @@
       }
 
       .section-divider {
-        width: 60px;
+        width: 56px;
         height: 3px;
         background: var(--gold);
-        margin-bottom: 32px;
+        margin-bottom: 26px;
+      }
+
+      /* ─── COVER ─────────────────────────────────────── */
+      .cover {
+        background: linear-gradient(160deg, #0d0d0d 0%, #1c1c1c 45%, #2a1a00 100%);
+        color: var(--white);
+        padding: 60px 40px 44px;
+        text-align: center;
+      }
+
+      .cover-badge {
+        display: inline-block;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-size: 0.68rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        padding: 6px 20px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+      }
+
+      .cover-logo {
+        font-size: 3.2rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        margin-bottom: 12px;
+      }
+
+      .cover-logo span {
+        color: var(--gold);
+      }
+
+      .cover-tagline {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.75);
+        font-style: italic;
+        margin-bottom: 26px;
+        letter-spacing: 0.02em;
+      }
+
+      .cover-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 28px;
+      }
+
+      .cover-pills span {
+        background: rgba(200, 150, 12, 0.15);
+        border: 1px solid rgba(200, 150, 12, 0.4);
+        color: var(--gold-light);
+        font-family: Arial, sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 6px 15px;
+        border-radius: 2px;
+      }
+
+      .cover-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.65);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 6px;
+      }
+
+      .cover-contact a {
+        color: var(--gold-light);
+        text-decoration: none;
+      }
+
+      .cover-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .cover-strip img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
       }
 
       /* ─── ABOUT ─────────────────────────────────────── */
@@ -210,40 +170,40 @@
 
       .about-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 40px;
         align-items: start;
       }
 
       .about-text p {
         color: var(--slate);
-        margin-bottom: 20px;
-        font-size: 1rem;
+        margin-bottom: 14px;
+        font-size: 0.94rem;
       }
 
       .mvv-grid {
         display: grid;
-        gap: 24px;
+        gap: 16px;
       }
 
       .mvv-card {
         border-left: 3px solid var(--gold);
-        padding: 16px 20px;
+        padding: 14px 18px;
         background: var(--light);
       }
 
       .mvv-card h4 {
         font-family: Arial, sans-serif;
-        font-size: 0.7rem;
-        letter-spacing: 0.25em;
+        font-size: 0.68rem;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
         color: var(--gold);
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
 
       .mvv-card p {
         color: var(--slate);
-        font-size: 0.9rem;
+        font-size: 0.86rem;
         margin: 0;
       }
 
@@ -258,32 +218,27 @@
 
       .values-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 16px;
-        margin-top: 40px;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        margin-top: 24px;
       }
 
       .value-item {
         text-align: center;
-        padding: 28px 16px;
+        padding: 18px 10px;
         border: 1px solid rgba(200, 150, 12, 0.25);
         background: rgba(200, 150, 12, 0.06);
-        transition: background 0.2s;
-      }
-
-      .value-item:hover {
-        background: rgba(200, 150, 12, 0.14);
       }
 
       .value-icon {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
       }
 
       .value-item h4 {
         font-family: Arial, sans-serif;
-        font-size: 0.8rem;
-        letter-spacing: 0.1em;
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         color: var(--gold-light);
       }
@@ -296,33 +251,33 @@
       .services-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 32px;
-        margin-top: 40px;
+        gap: 24px;
+        margin-top: 24px;
       }
 
       .service-group {
         background: var(--white);
-        padding: 32px;
+        padding: 24px 26px;
         border-top: 3px solid var(--gold);
       }
 
       .service-group h3 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         color: var(--charcoal);
-        margin-bottom: 20px;
-        padding-bottom: 12px;
+        margin-bottom: 16px;
+        padding-bottom: 10px;
         border-bottom: 1px solid #eee;
       }
 
       .service-list {
         list-style: none;
         display: grid;
-        gap: 8px;
+        gap: 7px;
       }
 
       .service-list li {
         font-family: Arial, sans-serif;
-        font-size: 0.88rem;
+        font-size: 0.85rem;
         color: var(--slate);
         padding-left: 18px;
         position: relative;
@@ -335,62 +290,86 @@
         left: 0;
       }
 
-      /* ─── PROCESS ───────────────────────────────────── */
-      .process {
+      /* ─── OUR WORK (image gallery) ──────────────────── */
+      .work {
         background: var(--white);
       }
 
+      .work-category {
+        margin-top: 26px;
+      }
+
+      .work-category:first-of-type {
+        margin-top: 24px;
+      }
+
+      .work-category h3 {
+        font-family: Arial, sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--charcoal);
+        margin-bottom: 10px;
+        padding-left: 12px;
+        border-left: 3px solid var(--gold);
+      }
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .work-grid.cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .work-grid figure {
+        overflow: hidden;
+        border-radius: 2px;
+      }
+
+      .work-grid img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      /* ─── PROCESS ───────────────────────────────────── */
+      .process {
+        background: var(--light);
+      }
+
       .process-steps {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        margin-top: 48px;
-        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px 12px;
+        margin-top: 24px;
       }
 
       .step {
-        flex: 1;
-        min-width: 120px;
         text-align: center;
-        position: relative;
-        padding: 0 8px;
       }
 
       .step-num {
-        width: 48px;
-        height: 48px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
         background: var(--gold);
         color: var(--white);
         font-family: Arial, sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: bold;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 12px;
-        position: relative;
-        z-index: 1;
-      }
-
-      .step:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        top: 24px;
-        left: calc(50% + 24px);
-        width: calc(100% - 48px);
-        height: 2px;
-        background: linear-gradient(
-          to right,
-          var(--gold),
-          rgba(200, 150, 12, 0.2)
-        );
+        margin: 0 auto 8px;
       }
 
       .step-label {
         font-family: Arial, sans-serif;
-        font-size: 0.72rem;
-        letter-spacing: 0.05em;
+        font-size: 0.7rem;
+        letter-spacing: 0.03em;
         color: var(--slate);
         text-transform: uppercase;
         line-height: 1.3;
@@ -404,65 +383,56 @@
       .why .section-title {
         color: var(--white);
       }
-      .why .section-divider {
-        background: var(--gold);
-      }
 
       .why-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 24px;
       }
 
       .why-item {
-        padding: 24px;
+        padding: 14px 16px;
         background: rgba(255, 255, 255, 0.04);
         border: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
       .why-item::before {
         content: "✓";
-        display: block;
         color: var(--gold);
-        font-size: 1.2rem;
-        margin-bottom: 10px;
+        font-size: 1rem;
+        flex-shrink: 0;
       }
 
       .why-item p {
         font-family: Arial, sans-serif;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.7);
-        margin: 0;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.75);
       }
 
       /* ─── INDUSTRIES ────────────────────────────────── */
       .industries {
-        background: var(--light);
+        background: var(--white);
       }
 
       .industry-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 32px;
+        gap: 8px;
+        margin-top: 20px;
       }
 
       .industry-tags span {
-        background: var(--white);
+        background: var(--light);
         border: 1px solid #ddd;
         color: var(--slate);
         font-family: Arial, sans-serif;
-        font-size: 0.8rem;
-        padding: 8px 18px;
+        font-size: 0.78rem;
+        padding: 7px 16px;
         border-radius: 2px;
-        transition: all 0.2s;
-      }
-
-      .industry-tags span:hover {
-        border-color: var(--gold);
-        color: var(--gold);
-        background: rgba(200, 150, 12, 0.05);
       }
 
       /* ─── SAFETY ─────────────────────────────────────── */
@@ -480,34 +450,34 @@
       .safety-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 48px;
+        gap: 36px;
         align-items: center;
       }
 
       .safety-text p {
         color: rgba(255, 255, 255, 0.85);
-        font-size: 1rem;
+        font-size: 0.92rem;
       }
 
       .safety-list {
         list-style: none;
         display: grid;
-        gap: 12px;
+        gap: 10px;
       }
 
       .safety-list li {
         font-family: Arial, sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.86rem;
         color: rgba(255, 255, 255, 0.85);
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
       }
 
       .safety-list li::before {
         content: "◆";
         color: var(--gold-light);
-        font-size: 0.6rem;
+        font-size: 0.55rem;
         flex-shrink: 0;
       }
 
@@ -522,42 +492,42 @@
         color: var(--white);
       }
       .contact .section-divider {
-        margin: 0 auto 32px;
+        margin: 0 auto 22px;
       }
 
       .contact-tagline {
-        font-size: 1rem;
+        font-size: 0.92rem;
         color: rgba(255, 255, 255, 0.6);
-        margin-bottom: 48px;
+        margin-bottom: 28px;
         font-style: italic;
       }
 
       .contact-cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 16px;
         justify-content: center;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
       }
 
       .contact-card {
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(200, 150, 12, 0.3);
-        padding: 28px 36px;
-        min-width: 220px;
+        padding: 20px 28px;
+        min-width: 200px;
       }
 
       .contact-card-label {
         font-family: Arial, sans-serif;
-        font-size: 0.6rem;
-        letter-spacing: 0.3em;
+        font-size: 0.58rem;
+        letter-spacing: 0.28em;
         text-transform: uppercase;
         color: var(--gold);
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
 
       .contact-card-value {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         color: var(--white);
       }
 
@@ -566,79 +536,77 @@
         text-decoration: none;
       }
 
-      .contact-card-value a:hover {
-        color: var(--gold-light);
-      }
-
       .contact-footer {
         border-top: 1px solid rgba(255, 255, 255, 0.08);
-        padding-top: 32px;
+        padding-top: 22px;
         font-family: Arial, sans-serif;
-        font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.3);
-        letter-spacing: 0.1em;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.35);
+        letter-spacing: 0.08em;
       }
 
       .contact-footer strong {
         color: var(--gold);
         display: block;
-        font-size: 1rem;
-        letter-spacing: 0.25em;
+        font-size: 0.95rem;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
 
-      /* ─── RESPONSIVE ────────────────────────────────── */
-      @media (max-width: 768px) {
-        .about-grid,
-        .services-grid,
-        .safety-content {
-          grid-template-columns: 1fr;
-          gap: 32px;
+      /* ─── PRINT / PDF ───────────────────────────────── */
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
         }
-
-        .step:not(:last-child)::after {
-          display: none;
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
         }
-
-        .process-steps {
-          flex-direction: column;
-          gap: 24px;
-          align-items: center;
+        section {
+          break-inside: avoid;
+        }
+        .work-category {
+          break-inside: avoid;
         }
       }
     </style>
   </head>
   <body>
-    <!-- ─── HERO ─────────────────────────────────────── -->
-    <section class="hero">
-      <div class="hero-badge">Professional Company Profile</div>
-      <h1 class="hero-logo">N.B.S <span>NIG</span> LIMITED</h1>
-      <p class="hero-tagline">
-        Building the Future with Quality, Integrity &amp; Excellence
-      </p>
-      <div class="hero-pills">
-        <span>Residential</span>
-        <span>Commercial</span>
-        <span>Industrial</span>
-        <span>Civil Engineering</span>
+    <div class="page">
+      <!-- COVER -->
+      <header class="cover">
+        <div class="cover-badge">Company Profile</div>
+        <h1 class="cover-logo">N.B.S <span>NIG</span> LIMITED</h1>
+        <p class="cover-tagline">
+          Building the Future with Quality, Integrity &amp; Excellence
+        </p>
+        <div class="cover-pills">
+          <span>Residential</span>
+          <span>Commercial</span>
+          <span>Industrial</span>
+          <span>Civil Engineering</span>
+        </div>
+        <div class="cover-contact">
+          <span>14, Deeper Life Street, Suleja, Niger State, Nigeria</span>
+          <span><a href="tel:+2348130217098">+234 813 021 7098</a></span>
+          <span
+            ><a href="mailto:NBSNIGLIMITED@gmail.com"
+              >NBSNIGLIMITED@gmail.com</a
+            ></span
+          >
+        </div>
+      </header>
+      <div class="cover-strip">
+        <img src="images/industrialroofing1.jpeg" alt="Industrial roofing project" />
+        <img src="images/welding1.jpeg" alt="Welding and fabrication work" />
+        <img src="images/electrical1.jpeg" alt="Electrical installation work" />
+        <img src="images/casting1.jpeg" alt="Concrete casting work" />
       </div>
-      <div class="hero-contact">
-        <span>📍 14, Deeper Life Street, Suleja, Niger State</span>
-        <span>📞 <a href="tel:+2348130217098">+234 813 021 7098</a></span>
-        <span
-          >✉️
-          <a href="mailto:NBSNIGLIMITED@gmail.com"
-            >NBSNIGLIMITED@gmail.com</a
-          ></span
-        >
-      </div>
-      <div class="scroll-hint">Scroll to explore</div>
-    </section>
 
-    <!-- ─── ABOUT ─────────────────────────────────────── -->
-    <section class="about">
-      <div class="container">
+      <!-- ABOUT -->
+      <section class="about">
         <div class="about-grid">
           <div class="about-text">
             <p class="section-label">Who We Are</p>
@@ -646,47 +614,46 @@
             <div class="section-divider"></div>
             <p>
               N.B.S NIG LIMITED is a Nigerian construction and general
-              contracting company committed to delivering high-quality building
-              and engineering solutions across residential, commercial,
-              industrial, and public sector projects.
+              contracting company committed to delivering high-quality
+              building and engineering solutions across residential,
+              commercial, industrial, and public sector projects.
             </p>
             <p>
               We combine technical expertise, skilled workmanship, and modern
-              construction practices to deliver projects that meet the highest
-              standards of quality, safety, and durability.
+              construction practices to deliver projects that meet the
+              highest standards of quality, safety, and durability.
             </p>
             <p>
               Whether constructing new buildings, renovating existing
               structures, or providing complete engineering services, we work
-              closely with our clients to ensure every project is completed on
-              time, within budget, and to specification.
+              closely with our clients to ensure every project is completed
+              on time, within budget, and to specification.
             </p>
           </div>
           <div class="mvv-grid">
             <div class="mvv-card">
               <h4>Our Mission</h4>
               <p>
-                To provide innovative, reliable, and cost-effective construction
-                solutions that exceed client expectations while maintaining the
-                highest standards of safety, quality, and professionalism.
+                To provide innovative, reliable, and cost-effective
+                construction solutions that exceed client expectations while
+                maintaining the highest standards of safety, quality, and
+                professionalism.
               </p>
             </div>
             <div class="mvv-card">
               <h4>Our Vision</h4>
               <p>
-                To become one of Nigeria's most trusted construction companies,
-                recognized for excellence, integrity, and sustainable project
-                delivery.
+                To become one of Nigeria's most trusted construction
+                companies, recognized for excellence, integrity, and
+                sustainable project delivery.
               </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ─── VALUES ────────────────────────────────────── -->
-    <section class="values">
-      <div class="container">
+      <!-- VALUES -->
+      <section class="values">
         <p class="section-label" style="color: rgba(200, 150, 12, 0.7)">
           What Drives Us
         </p>
@@ -715,15 +682,13 @@
           </div>
           <div class="value-item">
             <div class="value-icon">🤝</div>
-            <h4>Client Satisfaction</h4>
+            <h4>Client Focus</h4>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ─── SERVICES ──────────────────────────────────── -->
-    <section class="services">
-      <div class="container">
+      <!-- SERVICES -->
+      <section class="services">
         <p class="section-label">What We Do</p>
         <h2 class="section-title">Our <em>Services</em></h2>
         <div class="section-divider"></div>
@@ -753,12 +718,63 @@
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ─── PROCESS ───────────────────────────────────── -->
-    <section class="process">
-      <div class="container">
+      <!-- OUR WORK -->
+      <section class="work">
+        <p class="section-label">Project Gallery</p>
+        <h2 class="section-title">Our <em>Work</em></h2>
+        <div class="section-divider"></div>
+
+        <div class="work-category">
+          <h3>Industrial Roofing</h3>
+          <div class="work-grid">
+            <figure><img src="images/industrialroofing1.jpeg" alt="Industrial roofing installation" /></figure>
+            <figure><img src="images/industrialroofing2.jpeg" alt="Industrial roofing installation" /></figure>
+            <figure><img src="images/industrialroofing3.jpeg" alt="Industrial roofing installation" /></figure>
+          </div>
+        </div>
+
+        <div class="work-category">
+          <h3>Roofing</h3>
+          <div class="work-grid">
+            <figure><img src="images/roofing1.jpeg" alt="Roofing work" /></figure>
+            <figure><img src="images/roofing2.jpeg" alt="Roofing work" /></figure>
+            <figure><img src="images/roofing3.jpeg" alt="Roofing work" /></figure>
+          </div>
+        </div>
+
+        <div class="work-category">
+          <h3>Welding &amp; Fabrication</h3>
+          <div class="work-grid">
+            <figure><img src="images/welding1.jpeg" alt="Welding work" /></figure>
+            <figure><img src="images/welding2.jpeg" alt="Welding work" /></figure>
+            <figure><img src="images/fabricating1.jpeg" alt="Metal fabrication work" /></figure>
+          </div>
+        </div>
+
+        <div class="work-category">
+          <h3>Electrical &amp; Plumbing Installations</h3>
+          <div class="work-grid cols-2">
+            <figure><img src="images/electrical1.jpeg" alt="Electrical installation work" /></figure>
+            <figure><img src="images/electrical2.jpeg" alt="Electrical installation work" /></figure>
+            <figure><img src="images/plumbing1.jpeg" alt="Plumbing installation work" /></figure>
+            <figure><img src="images/plumbing2.jpeg" alt="Plumbing installation work" /></figure>
+          </div>
+        </div>
+
+        <div class="work-category">
+          <h3>Concrete Casting</h3>
+          <div class="work-grid">
+            <figure><img src="images/casting1.jpeg" alt="Concrete casting work" /></figure>
+            <figure><img src="images/casting2.jpeg" alt="Concrete casting work" /></figure>
+            <figure><img src="images/casting3.jpeg" alt="Concrete casting work" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="process">
         <p class="section-label">How We Work</p>
         <h2 class="section-title">Our <em>Process</em></h2>
         <div class="section-divider"></div>
@@ -796,12 +812,10 @@
             <div class="step-label">Maintenance</div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ─── WHY US ─────────────────────────────────────── 
-    <section class="why">
-      <div class="container">
+      <!-- WHY US -->
+      <section class="why">
         <p class="section-label" style="color: rgba(200, 150, 12, 0.7)">
           Our Edge
         </p>
@@ -819,13 +833,10 @@
           <div class="why-item"><p>Customer-Focused Approach</p></div>
           <div class="why-item"><p>Long-Term Maintenance Support</p></div>
         </div>
-      </div>
-    </section>
-    -->
+      </section>
 
-    <!-- ─── INDUSTRIES ────────────────────────────────── 
-    <section class="industries">
-      <div class="container">
+      <!-- INDUSTRIES -->
+      <section class="industries">
         <p class="section-label">Who We Serve</p>
         <h2 class="section-title">Industries <em>We Serve</em></h2>
         <div class="section-divider"></div>
@@ -843,13 +854,10 @@
           <span>Private Developers</span>
           <span>Real Estate Companies</span>
         </div>
-      </div>
-    </section>
-    -->
+      </section>
 
-    <!-- ─── SAFETY ─────────────────────────────────────── 
-    <section class="safety">
-      <div class="container">
+      <!-- SAFETY -->
+      <section class="safety">
         <div class="safety-content">
           <div class="safety-text">
             <p class="section-label" style="color: rgba(232, 180, 34, 0.8)">
@@ -861,8 +869,8 @@
             <div class="section-divider"></div>
             <p>
               At N.B.S NIG LIMITED, safety is a fundamental part of every
-              project. We maintain an unwavering commitment to the wellbeing of
-              our workforce, clients, and the communities we serve.
+              project. We maintain an unwavering commitment to the wellbeing
+              of our workforce, clients, and the communities we serve.
             </p>
           </div>
           <ul class="safety-list">
@@ -873,35 +881,47 @@
             <li>Continuous improvement culture</li>
           </ul>
         </div>
-      </div>
-    </section>-->
+      </section>
 
-    <!-- ─── CONTACT ───────────────────────────────────── 
-  <section class="contact">
-    <div class="container">
-      <p class="section-label" style="color:rgba(200,150,12,0.7)">Get In Touch</p>
-      <h2 class="section-title">Let's Build Something <em>Great Together</em></h2>
-      <div class="section-divider"></div>
-      <p class="contact-tagline">Reach out today to discuss your project requirements.</p>
-      <div class="contact-cards">
-        <div class="contact-card">
-          <div class="contact-card-label">Location</div>
-          <div class="contact-card-value">14, Deeper Life Street,<br>Suleja, Niger State, Nigeria</div>
+      <!-- CONTACT -->
+      <section class="contact">
+        <p class="section-label" style="color: rgba(200, 150, 12, 0.7)">
+          Get In Touch
+        </p>
+        <h2 class="section-title">
+          Let's Build Something <em>Great Together</em>
+        </h2>
+        <div class="section-divider"></div>
+        <p class="contact-tagline">
+          Reach out today to discuss your project requirements.
+        </p>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-card-label">Location</div>
+            <div class="contact-card-value">
+              14, Deeper Life Street,<br />Suleja, Niger State, Nigeria
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-label">Phone</div>
+            <div class="contact-card-value">
+              <a href="tel:+2348130217098">+234 813 021 7098</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-value">
+              <a href="mailto:NBSNIGLIMITED@gmail.com"
+                >NBSNIGLIMITED@gmail.com</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="contact-card">
-          <div class="contact-card-label">Phone</div>
-          <div class="contact-card-value"><a href="tel:+2348130217098">+234 813 021 7098</a></div>
+        <div class="contact-footer">
+          <strong>N.B.S NIG LIMITED</strong>
+          Building Excellence. Delivering Confidence.
         </div>
-        <div class="contact-card">
-          <div class="contact-card-label">Email</div>
-          <div class="contact-card-value"><a href="mailto:NBSNIGLIMITED@gmail.com">NBSNIGLIMITED@gmail.com</a></div>
-        </div>
-      </div>
-      <div class="contact-footer">
-        <strong>N.B.S NIG LIMITED</strong>
-        Building Excellence. Delivering Confidence.
-      </div>
+      </section>
     </div>
-  </section>-->
   </body>
 </html>
