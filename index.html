@@ -82,6 +82,25 @@
         text-align: center;
       }
 
+      .cover-logo-mark {
+        width: 84px;
+        height: 84px;
+        background: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 22px;
+        padding: 12px;
+        box-shadow: 0 0 0 3px rgba(200, 150, 12, 0.35);
+      }
+
+      .cover-logo-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
       .cover-badge {
         display: inline-block;
         border: 1px solid var(--gold);
@@ -95,15 +114,39 @@
       }
 
       .cover-logo {
-        font-size: 3.2rem;
+        font-size: 5.2rem;
         font-weight: 900;
-        letter-spacing: -0.02em;
+        letter-spacing: 0.03em;
         line-height: 1;
-        margin-bottom: 12px;
+        margin-bottom: 14px;
+        color: var(--white);
       }
 
       .cover-logo span {
         color: var(--gold);
+      }
+
+      .cover-fullname {
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 6px;
+      }
+
+      .cover-fullname strong {
+        color: var(--gold-light);
+        font-weight: 700;
+      }
+
+      .cover-legalname {
+        font-family: Arial, sans-serif;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 22px;
       }
 
       .cover-tagline {
@@ -584,8 +627,15 @@
     <div class="page">
       <!-- COVER -->
       <header class="cover">
+        <div class="cover-logo-mark">
+          <img src="images/logo1.jpeg" alt="N.B.S NIG Limited logo" />
+        </div>
         <div class="cover-badge">Company Profile</div>
-        <h1 class="cover-logo">N.B.S <span>NIG</span> LIMITED</h1>
+        <h1 class="cover-logo">N<span>B</span>S</h1>
+        <p class="cover-fullname">
+          <strong>N</strong>elson <strong>B</strong>uilding <strong>S</strong>ervices
+        </p>
+        <p class="cover-legalname">Nig. Limited</p>
         <p class="cover-tagline">
           Building the Future with Quality, Integrity &amp; Excellence
         </p>
